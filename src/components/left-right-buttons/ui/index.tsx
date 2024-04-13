@@ -21,7 +21,8 @@ export const LeftRightButtons = observer(() => {
   const handleAddLeftButton = useCallback(() => {
     buttonsStore.addButton({
       name: buttonsStore.buttonName,
-      callback: eval(buttonsStore.buttonFuncText),
+      // eslint-disable-next-line no-new-func
+      callback: Function(buttonsStore.buttonFuncText),
     });
   }, []);
 
@@ -29,7 +30,8 @@ export const LeftRightButtons = observer(() => {
     buttonsStore.addButton(
       {
         name: buttonsStore.buttonName,
-        callback: eval(buttonsStore.buttonFuncText),
+        // eslint-disable-next-line no-new-func
+        callback: Function(buttonsStore.buttonFuncText),
       },
       "right"
     );

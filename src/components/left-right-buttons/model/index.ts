@@ -9,7 +9,7 @@ class ButtonsStore {
   leftButtons: Array<ButtonConfig> = [];
   rightButtons: Array<ButtonConfig> = [];
   buttonName: string = "buttonName";
-  buttonFuncText: string = "// Enter js function";
+  buttonFuncText: string = "alert('hi')\nalert('hiklj')";
 
   constructor() {
     makeAutoObservable(this);
